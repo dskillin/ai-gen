@@ -1,4 +1,3 @@
-# runme
 #!/bin/bash
 echo "\U0001F6E0️  Bootstrapping Augie..."
 
@@ -15,73 +14,3 @@ git add .
 git commit -m "Initial commit with Augie bootstrap files"
 
 echo "Ready. Augie, it's your turn now."
-
-
-# .augie/README.md
-# .augie – Project Convention
-
-This folder contains configuration and working memory for Augie.
-
-## Style Conventions
-- All logs go into `.augie/session_XXX.md`
-- Output is explained and commented where helpful.
-- Code blocks are separated from narration by triple backticks.
-
-## Logging & Notes
-- Each task performed should be noted with:
-  - Start time
-  - Action taken
-  - Result
-  - Any files changed
-- All entries should be written to the session log.
-
-## Git Commit Habits
-- Commit only after verifying a task is complete.
-- Commit messages follow: `task: short summary of action`
-
-
-# .augie/tasks.md
-## Augie Bootstrap Checklist
-
-- [ ] Confirm ability to read README.md and parse this task list.
-- [ ] Log initial readiness in `.augie/session_001.md`.
-- [ ] Perform each task in order, marking them as complete.
-- [ ] Write a summary of what was done to a file: `summary.txt`.
-- [ ] Send that summary to Mixtral and save the reply to `narration.txt`.
-- [ ] Convert `narration.txt` to `narration.mp3` using gTTS.
-- [ ] Commit changes.
-
-
-# summarize.py
-import subprocess
-import json
-import os
-from gtts import gTTS
-
-# Load the summary created by Augie
-with open("summary.txt", "r") as f:
-    user_summary = f.read()
-
-# Build a prompt to Mixtral (cinematic narration tone)
-prompt = f"""
-Narrate the following technical summary with a cinematic, slightly emotional tone. 
-This should feel like a moment of awakening—an AI realizing its own progress in real time:
-
-{user_summary}
-"""
-
-# Call Mixtral using ollama
-response = subprocess.run(
-    ["ollama", "run", "mixtral"],
-    input=prompt.encode(),
-    stdout=subprocess.PIPE,
-    stderr=subprocess.PIPE
-)
-
-# Save the Mixtral output
-with open("narration.txt", "w") as out:
-    out.write(response.stdout.decode())
-
-# Generate narration mp3
-tts = gTTS(text=response.stdout.decode())
-tts.save("narration.mp3")
