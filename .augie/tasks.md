@@ -13,12 +13,12 @@
 - [x] Verify results
 - [x] Update this checklist
 - [x] Record actions in .augie/notes/session_001.md
-- [ ] Commit results
+- [x] Commit results
 
 ## ✅ Advanced Phase
 - [x] Install ollama or determine if it is present on the system
 - [x] Assure that mistral or mixtral is available
-- [ ] write code which asks the llm to summarize this file
-- [ ] summarized contents to be saved as narration.txt
-- [ ] install text to voice tooling
-- [ ] create an mp3 from the voice encoder reading you the summary
+- [x] write code which asks the llm to summarize this file
+- [x] summarized contents to be saved as narration.txt
+- [x] install text to voice tooling
+- [x] create an mp3 from the voice encoder reading you the summary
