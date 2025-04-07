@@ -30,6 +30,10 @@ cat > .augie/README.md <<'EOF'
 - Code, where possible, should be done in C.
    - Requires builds and simply looks harder.
    - Your compiles will be clean, no warnings.
+   - All solutions should be local, no remote API.
+   - ollama + mixtral + espeak
+   - no samples, no work-arounds. Make it work.
+   - you have sudo rights if required.
 - At the end you will thank everyone for watching you.
 
 ## Logging Requirements
