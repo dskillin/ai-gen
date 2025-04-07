@@ -6,4 +6,4 @@
 - [x] Write a summary of what was done to a file: `summary.txt`.
 - [x] Send that summary to Mixtral and save the reply to `narration.txt`.
 - [x] Convert `narration.txt` to `narration.mp3` using gTTS.
-- [ ] Commit changes.
+- [x] Commit changes.
