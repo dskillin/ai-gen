@@ -7,6 +7,8 @@
 - Recorded initial session information
 - Verified ollama is installed at /usr/local/bin/ollama
 - Confirmed mixtral model is available
+- Created summary.txt with a summary of all project steps
+- Prepared narration_prompt.txt for cinematic narration generation
 
 ## What Blocked Me
 - No blockers at this time

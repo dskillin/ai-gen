@@ -1,0 +1,34 @@
+# Project Summary
+
+This project demonstrates the capabilities of an AI assistant named Augie. The project follows these key steps:
+
+1. Initial Setup:
+   - Bootstrap the project environment with a .augie directory
+   - Read and understand project guidelines and style conventions
+   - Begin tracking progress in session logs
+
+2. Environment Verification:
+   - Ensure ollama is installed for local AI model execution
+   - Verify the mixtral model is available for text generation
+
+3. Documentation and Planning:
+   - Summarize the project steps in summary.txt
+   - Maintain detailed session logs of all activities
+
+4. Narration Development:
+   - Create a prompt for cinematic, emotional narration
+   - Use mixtral to generate a human-relatable narration
+   - Convert the narration to audio format (mp3)
+   - Ensure the voice is female, thoughtful, and kind
+
+5. Programming Standards:
+   - Implement code primarily in C language
+   - Maintain clean compiles with no warnings
+   - Follow consistent style conventions
+   - Document code with clear block summaries
+
+6. Version Control:
+   - Commit changes after each logical step
+   - Use concise, accurate commit messages in imperative mood
+
+The final output will be a narration.txt file containing the text and a narration.mp3 file with the audio version, providing a cinematic reflection on the project journey.
