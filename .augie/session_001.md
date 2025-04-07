@@ -6,6 +6,8 @@
 - The script created the .augie directory with README.md, tasks.md, and session_001.md
 - Read through the project guidelines and task list
 - Began working through the tasks systematically
+- Verified ollama is installed at /usr/local/bin/ollama
+- Confirmed mixtral model is available
 
 ## What Blocked Me
 
