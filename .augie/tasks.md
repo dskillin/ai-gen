@@ -1,0 +1,19 @@
+- [x] Read .augie/README.md and understand style and logging rules
+- [x] Load and parse this task file
+- [x] Record startup in session_001.md
+- [ ] Pick first task
+- [ ] Perform it, log the result
+- [ ] Check it off
+- [ ] Commit the result
+- [ ] Repeat until complete
+- [ ] assure ollama is installed
+- [ ] assure mixtral is available
+- [ ] Summarize all the steps of this document in summary.txt
+- [ ] Prepare a prompt that joins your summary with a request for:
+      - Cinematic, human-relatable and emotional narration.
+      - Inspired, humble, observant and cinematic.
+      - Mentions that this is for a live recorded project.
+- [ ] write code to have mixtral summarize your prompt as a narration.
+- [ ] write code to convert mixtral summary to mp3
+      - Female voice, thoughtful, kind
+- [ ] Save the summary as narration.txt and narration.mp3
