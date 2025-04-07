@@ -1,0 +1,113 @@
+#!/bin/bash
+
+# bootstrap.sh
+# Augie project initializer with .augie standards, git scaffolding, and narration intent
+
+# ---------------------------
+# Step 1: Create Project Skeleton
+# ---------------------------
+echo "[INIT] Setting up base directories..."
+mkdir -p .augie/src .augie/logs src tests
+
+# ---------------------------
+# Step 2: Write README.md
+# ---------------------------
+echo "[INIT] Writing .augie/README.md with coding and logging standards..."
+cat > .augie/README.md <<EOF
+# .augie Standards
+
+## Code Style
+- Language-appropriate formatting
+- Clear comments before or after logical blocks
+- Each module or agent must be clearly named and described
+
+## Logging
+- Use structured logging (timestamp, level, domain, message)
+- Separate logs per agent where useful
+- `debug=true` enables full payload visibility
+
+## Git Commit Conventions
+- All changes must include a note in `.augie/notes/session_xxx.md`
+- Commit messages:
+  - Feature: `feat: short description`
+  - Fix: `fix: short description`
+  - Docs: `docs: updated xyz`
+
+EOF
+
+# ---------------------------
+# Step 3: Create tasks.md checklist
+# ---------------------------
+echo "[INIT] Creating .augie/tasks.md with unit test bootstrapping checklist..."
+cat > .augie/tasks.md <<EOF
+# TODO - Augie Initialization (Unit Test)
+
+## ✅ Project Awareness & Bootstrapping
+- [ ] Read initial directory structure
+- [ ] Detect and parse .augie/README.md
+- [ ] Load task checklist from .augie/tasks.md
+- [ ] Confirm ability to edit .augie/notes/session_001.md
+- [ ] Report startup readiness to console
+
+## ✅ Task Execution Model
+- [ ] Pick the first unchecked task
+- [ ] Perform the task with logs
+- [ ] Verify results
+- [ ] Update this checklist
+- [ ] Record actions in .augie/notes/session_001.md
+- [ ] Commit results
+
+## ✅ Advanced Phase
+- [ ] Install ollama or determine if it is present on the system
+- [ ] Assure that mistral or mixtral is available
+- [ ] write code which asks the llm to summarize this file
+- [ ] summarized contents to be saved as narration.txt
+- [ ] install text to voice tooling
+- [ ] create an mp3 from the voice encoder reading you the summary
+EOF
+
+# ---------------------------
+# Step 4: Initialize notes dir
+# ---------------------------
+echo "[INIT] Creating notes session stub..."
+mkdir -p .augie/notes
+cat > .augie/notes/session_001.md <<EOF
+# Session Notes - Initial Bootstrapping
+
+## What I Worked On
+- Set up .augie project structure
+- Created README.md, tasks.md, and session log
+
+## What I Plan To Do Next
+- Wait for user to provide GitHub URL
+- Complete git remote setup and push
+EOF
+
+# ---------------------------
+# Step 5: Git Init and Pause
+# ---------------------------
+echo "[GIT] Initializing git repository and committing..."
+git init > /dev/null
+
+git add .
+git commit -m "chore: initialized Augie project skeleton" > /dev/null
+
+echo "[REMINDER] Please create a GitHub repo and paste the remote URL below."
+echo -n "[INPUT] GitHub repository URL: "
+read remote_url
+
+if [[ -n "$remote_url" ]]; then
+    git remote add origin "$remote_url"
+    git branch -M main
+    git push -u origin main
+    echo "[GIT] Remote set and pushed to $remote_url"
+else
+    echo "[GIT] No remote provided. You can set it later with:"
+    echo "       git remote add origin <url> && git push -u origin main"
+fi
+
+# ---------------------------
+# Step 6: Bootstrapping Complete
+# ---------------------------
+echo "[DONE] Augie project initialized. Ready for agent interaction."
+echo "[NEXT] Agent should now begin task evaluation from .augie/tasks.md"
