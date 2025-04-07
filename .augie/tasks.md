@@ -6,8 +6,8 @@
 - [ ] Check it off
 - [ ] Commit the result
 - [ ] Repeat until complete
-- [ ] assure ollama is installed
-- [ ] assure mixtral is available
+- [x] assure ollama is installed
+- [x] assure mixtral is available
 - [ ] Summarize all the steps of this document in summary.txt
 - [ ] Prepare a prompt that joins your summary with a request for:
       - Cinematic, human-relatable and emotional narration.
