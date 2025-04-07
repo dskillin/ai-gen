@@ -10,6 +10,7 @@
 - Verified ollama is installed at /usr/local/bin/ollama
 - Verified mixtral model is available
 - Created summary.txt with a comprehensive project overview
+- Prepared narration_prompt.txt with guidelines for cinematic narration
 
 ## What Blocked Me
 
