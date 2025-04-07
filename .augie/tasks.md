@@ -13,7 +13,7 @@
       - Cinematic, human-relatable and emotional narration.
       - Inspired, humble, observant and cinematic.
       - Mentions that this is for a live recorded project.
-- [ ] write code to have mixtral summarize your prompt as a narration.
-- [ ] write code to convert mixtral summary to mp3
+- [x] write code to have mixtral summarize your prompt as a narration.
+- [x] write code to convert mixtral summary to mp3
       - Female voice, thoughtful, kind
 - [ ] Save the summary as narration.txt and narration.mp3

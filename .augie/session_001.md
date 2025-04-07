@@ -10,6 +10,9 @@
 - Confirmed mixtral is available in ollama
 - Created summary.txt with a comprehensive summary of all project steps
 - Created prompt.txt with a request for cinematic narration based on the summary
+- Wrote generate_narration.c to interface with Mixtral for text generation
+- Wrote text_to_speech.c to convert text to MP3 audio
+- Created a Makefile to compile both C programs
 
 ## What Blocked Me
 - No blockers at this time
