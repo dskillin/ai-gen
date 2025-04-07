@@ -8,6 +8,7 @@
 - Started logging in session_001.md
 - Verified ollama is installed at /usr/local/bin/ollama
 - Confirmed mixtral is available in ollama
+- Created summary.txt with a comprehensive summary of all project steps
 
 ## What Blocked Me
 - No blockers at this time
