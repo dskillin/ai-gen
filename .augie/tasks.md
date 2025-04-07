@@ -8,7 +8,7 @@
 - [x] Repeat until complete
 - [x] assure ollama is installed
 - [x] assure mixtral is available
-- [ ] Summarize all the steps of this document in summary.txt
+- [x] Summarize all the steps of this document in summary.txt
 - [ ] Prepare a prompt that joins your summary with a request for:
       - Cinematic, human-relatable and emotional narration.
       - Inspired, humble, observant and cinematic.

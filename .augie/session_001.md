@@ -8,6 +8,7 @@
 - Began working through the tasks systematically
 - Verified ollama is installed at /usr/local/bin/ollama
 - Confirmed mixtral model is available
+- Created summary.txt with an overview of the project steps
 
 ## What Blocked Me
 
