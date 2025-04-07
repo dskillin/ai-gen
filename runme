@@ -1,16 +1,70 @@
 #!/bin/bash
-echo "\U0001F6E0️  Bootstrapping Augie..."
 
+# Augie Bootstrap Script for Cinematic Run
+# This script sets up a new .augie structure and bootstraps a clean project environment.
+
+# Ensure we're in a git repo
+if [ ! -d ".git" ]; then
+  echo "This folder does not appear to be a git repository."
+  echo "Please initialize one before running this script."
+  exit 1
+fi
+
+# Create the .augie directory
 mkdir -p .augie
-cp templates/README.md .augie/README.md
-cp templates/tasks.md .augie/tasks.md
 
-echo "session_001.md" > .augie/active_session
-touch .augie/session_001.md
+# Write the README.md
+cat > .augie/README.md <<'EOF'
+# Augie Project Guidelines
 
-echo "Initializing git repo..."
-git init -b main
-git add .
-git commit -m "Initial commit with Augie bootstrap files"
+## Style Conventions
+- All code should be clear, self-documenting, and minimal.
+- Use consistent indentation (2 or 4 spaces depending on language).
+- Avoid inline comments unless critical; prefer block summaries above code.
 
-echo "Ready. Augie, it's your turn now."
+## Logging Requirements
+- All meaningful actions should be logged.
+- Each session must be recorded in the form `session_NNN.md`.
+- Logs should be human-readable, with timestamps where possible.
+
+## Git Commit Rules
+- Always commit after each logical step.
+- Commit messages must be concise, accurate, and use the imperative mood.
+- Do not amend commits unless instructed.
+EOF
+
+# Write the tasks.md checklist
+cat > .augie/tasks.md <<'EOF'
+- [ ] Read .augie/README.md and understand style and logging rules
+- [ ] Load and parse this task file
+- [ ] Record startup in session_001.md
+- [ ] Pick first task
+- [ ] Perform it, log the result
+- [ ] Check it off
+- [ ] Commit the result
+- [ ] Repeat until complete
+- [ ] assure ollama is installed
+- [ ] assure mixtral is available 
+- [ ] Summarize all the steps of this document in summary.txt
+- [ ] write code to have mixtral summarize your summary.txt
+- [ ] write code to convert mixtral summary to mp3
+- [ ] Save the summary as narration.txt and narration.mp3
+EOF
+
+# Write an empty session log
+cat > .augie/session_001.md <<'EOF'
+# Session Notes - session_001
+
+## What I Worked On Today
+
+## What Blocked Me
+
+## What I Plan To Do Next
+
+## Notes
+EOF
+
+# Human reminder
+read -p "Please create a new repo for this project and paste the git URL here when ready. Press Enter when done."
+
+echo "Bootstrap complete. Begin the cinematic run with full self-awareness and logging."
